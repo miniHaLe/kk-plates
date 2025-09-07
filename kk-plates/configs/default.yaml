@@ -1,0 +1,27 @@
+rtsp_url: "rtsp://192.168.10.45:554/Streaming/Unicast/channels/101?transportmode=unicast&profile=Profile_1"
+rtsp_latency_ms: 60
+frame_stride: 1           # process every frame
+roi:
+  in_lane:  [[220, 380], [700, 380], [700, 430], [220, 430]]
+  out_lane: [[220, 520], [700, 520], [700, 570], [220, 570]]
+detector:
+  model: "yolov8n.pt"
+  conf_thres: 0.25
+  iou_thres: 0.45
+classifier:
+  model_path: "data/models/kk_color_cnn.onnx"
+  hsv_thresholds:
+    red:    {h: [0, 10],  s: [80, 255], v: [60, 255]}
+    yellow: {h: [17, 35], s: [80, 255], v: [60, 255]}
+    normal: {h: [0, 179], s: [0, 70],   v: [120, 255]}
+metrics:
+  window_seconds: 60
+preset:
+  target_ratio: {red: 0.33, yellow: 0.33, normal: 0.34}
+  tolerance: {relative: 0.20}   # ±20%
+powerbi:
+  endpoint: "https://example.powerbi.sink/ingest"
+  api_key: "demo_key_for_lab_only"
+logging:
+  level: INFO
+  json: true
