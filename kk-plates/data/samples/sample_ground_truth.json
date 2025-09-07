@@ -1,0 +1,49 @@
+{
+  "video_info": {
+    "duration": 10,
+    "fps": 25,
+    "total_frames": 250,
+    "total_plates": 15
+  },
+  "expected_metrics": {
+    "min_in_events": 8,
+    "min_total_plates": 10,
+    "color_distribution": {
+      "red": 0.33,
+      "yellow": 0.33,
+      "normal": 0.34
+    }
+  },
+  "sample_events": [
+    {
+      "timestamp": 1.0,
+      "event": "in",
+      "color": "red",
+      "track_id": 1
+    },
+    {
+      "timestamp": 2.0,
+      "event": "in",
+      "color": "yellow",
+      "track_id": 2
+    },
+    {
+      "timestamp": 3.0,
+      "event": "in",
+      "color": "normal",
+      "track_id": 3
+    },
+    {
+      "timestamp": 4.0,
+      "event": "out",
+      "color": "red",
+      "track_id": 1
+    },
+    {
+      "timestamp": 5.0,
+      "event": "in",
+      "color": "red",
+      "track_id": 4
+    }
+  ]
+}

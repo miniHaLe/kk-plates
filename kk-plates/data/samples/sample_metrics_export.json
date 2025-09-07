@@ -1,0 +1,38 @@
+{
+  "capture_duration": 10,
+  "metrics": [
+    {
+      "timestamp": 1234567890.0,
+      "total_in": 45,
+      "total_out": 42,
+      "current_on_belt": 3,
+      "color_counts": {
+        "red": 15,
+        "yellow": 15,
+        "normal": 15
+      },
+      "window_seconds": 60,
+      "plates_per_minute": 12.5,
+      "color_frequencies": {
+        "red": 4.2,
+        "yellow": 4.1,
+        "normal": 4.2
+      },
+      "color_ratios": {
+        "red": 0.333,
+        "yellow": 0.333,
+        "normal": 0.334
+      }
+    }
+  ],
+  "stats": {
+    "total_in": 45,
+    "total_out": 42,
+    "current_on_belt": 3,
+    "color_counts": {
+      "red": 15,
+      "yellow": 15,
+      "normal": 15
+    }
+  }
+}

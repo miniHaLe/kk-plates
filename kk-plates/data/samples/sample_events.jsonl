@@ -1,0 +1,3 @@
+{"timestamp": "2024-01-15T10:30:00.123", "event": "crossing_event", "track_id": 42, "direction": "in", "color": "red", "position": [250, 400]}
+{"timestamp": "2024-01-15T10:30:01.456", "event": "metrics_snapshot", "total_in": 100, "total_out": 97, "current_on_belt": 3, "plates_per_minute": 15.2, "color_ratios": {"red": 0.35, "yellow": 0.32, "normal": 0.33}}
+{"timestamp": "2024-01-15T10:30:05.789", "event": "alert_generated", "alert_type": "color_ratio_deviation", "severity": "warning", "message": "Red plate ratio exceeds target", "details": {"color": "red", "actual": 0.42, "target": 0.33}}
